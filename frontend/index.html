@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[R.ASHOK KUMAR] — Full-Stack Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="#top" class="logo">&lt;AK/&gt;</a>
+    <div class="nav__links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header id="top" class="hero">
+  <div class="hero__inner">
+    <div class="editor">
+      <div class="editor__bar">
+        <span class="dot dot--r"></span>
+        <span class="dot dot--y"></span>
+        <span class="dot dot--g"></span>
+        <span class="editor__filename">about-me.js</span>
+      </div>
+      <pre class="editor__body"><code id="typedCode"></code><span class="cursor">|</span></pre>
+    </div>
+    <p class="hero__sub">Computer Science Engineering graduate, 2026 &mdash; building full-stack applications with Java, MySQL, and the web.</p>
+    <div class="hero__cta">
+      <a href="#projects" class="btn btn--primary">View Projects</a>
+      <a href="#contact" class="btn btn--ghost">Get in Touch</a>
+    </div>
+    <div class="stats">
+      <div class="stats__item">
+        <span class="stats__num">3+</span>
+        <span class="stats__label">Projects Built</span>
+      </div>
+      <div class="stats__item">
+        <span class="stats__num">1</span>
+        <span class="stats__label">Internship Completed</span>
+      </div>
+      <div class="stats__item">
+        <span class="stats__num">2026</span>
+        <span class="stats__label">B.E. CSE Graduate</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section id="about" class="section">
+    <p class="eyebrow">// about</p>
+    <h2 class="section__title">Who I am</h2>
+    <div class="about__grid">
+      <p class="about__text">
+        I'm a Computer Science Engineering graduate (B.E., 2026) from Vels Institute of Science, Technology &amp; Advanced Studies,
+        with a strong interest in software development and problem-solving through technology. I work across Python, Java, SQL,
+        and web technologies (HTML, CSS, JavaScript), with a solid grounding in OOP, database management, and machine learning fundamentals.
+      </p>
+      <p class="about__text">
+        During my degree I built an AI-based job role recommendation system (Flask, MySQL, Scikit-learn, NLP), a cybercrime data
+        analysis and prediction model using NCRB data, and a smart feedback system with real-time sentiment analysis dashboards.
+        I also completed an internship in full-stack Java web development, gaining hands-on experience integrating front-end and
+        back-end systems in a team setting.
+      </p>
+      <div class="about__card">
+        <p class="about__card-label">Education</p>
+        <p class="about__card-main">B.E. Computer Science Engineering</p>
+        <p class="about__card-sub">Vels Institute of Science, Technology &amp; Advanced Studies — 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="section">
+    <p class="eyebrow">// experience</p>
+    <h2 class="section__title">Experience</h2>
+    <div class="timeline">
+      <div class="timeline__item">
+        <div class="timeline__dot"></div>
+        <div class="timeline__content">
+          <p class="timeline__role">Full-Stack Development Intern</p>
+          <p class="timeline__meta">[8 Queens] Software Solutions &middot; [1-Month]</p>
+          <p class="timeline__desc">
+            Worked on full-stack web development using Java, contributing to both front-end and back-end
+            integration in a team environment. Gained practical exposure to real-world development processes,
+            code reviews, and collaborative engineering workflows.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <p class="eyebrow">// tech stack</p>
+    <h2 class="section__title">Skills</h2>
+    <div class="skillbars">
+      <div class="skillbar">
+        <div class="skillbar__top"><span>Java</span><span>70%</span></div>
+        <div class="skillbar__track"><div class="skillbar__fill" style="--level:70%"></div></div>
+      </div>
+      <div class="skillbar">
+        <div class="skillbar__top"><span>MySQL</span><span>70%</span></div>
+        <div class="skillbar__track"><div class="skillbar__fill" style="--level:70%"></div></div>
+      </div>
+      <div class="skillbar">
+        <div class="skillbar__top"><span>HTML &amp; CSS</span><span>80%</span></div>
+        <div class="skillbar__track"><div class="skillbar__fill" style="--level:80%"></div></div>
+      </div>
+      <div class="skillbar">
+        <div class="skillbar__top"><span>JavaScript</span><span>65%</span></div>
+        <div class="skillbar__track"><div class="skillbar__fill" style="--level:65%"></div></div>
+      </div>
+      <div class="skillbar">
+        <div class="skillbar__top"><span>Python</span><span>55%</span></div>
+        <div class="skillbar__track"><div class="skillbar__fill" style="--level:55%"></div></div>
+      </div>
+    </div>
+    <div class="skills skills--secondary">
+      <span class="chip">Spring Boot</span>
+      <span class="chip">OOP</span>
+      <span class="chip">Machine Learning</span>
+      <span class="chip">NLP</span>
+      <span class="chip">Data Analysis</span>
+      <span class="chip">REST APIs</span>
+      <span class="chip">Git &amp; GitHub</span>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <p class="eyebrow">GET /api/projects</p>
+    <h2 class="section__title">Projects</h2>
+    <div id="projectsGrid" class="projects__grid">
+      <p class="projects__status" id="projectsStatus">Loading projects…</p>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <p class="eyebrow">// contact</p>
+    <h2 class="section__title">Let's talk</h2>
+    <div class="contact__grid">
+      <form id="contactForm" class="contact__form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" class="btn btn--primary" id="contactSubmit">Send Message</button>
+        <p id="contactStatus" class="contact__status"></p>
+      </form>
+      <div class="contact__links">
+        <p class="about__card-label">Reach me directly</p>
+        <a href="mailto:rashokkumarak321@gmail.com" class="contact__link">rashokkumarak321@gmail.com</a>
+        <a href="https://github.com/rashokkumarak321-cpu" class="contact__link">github.com/ashok-kumar</a>
+        <a href="https://www.linkedin.com/in/ashok-kumar-r-390192387/" class="contact__link">linkedin.com/in/ashok-kumar</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Built from scratch with HTML, CSS, JS, Java (Spring Boot) and MySQL.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
