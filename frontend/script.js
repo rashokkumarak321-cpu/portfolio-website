@@ -121,6 +121,88 @@ contactForm.addEventListener("submit", async (e) => {
   }
 });
 
+/* ---------- added change ---------- */
+/* =========================================================
+   ADD THIS BLOCK TO YOUR EXISTING script.js
+   Paste it in right BEFORE the "/* ---------- Init ---------- */
+/*section at the very bottom of your file.
+   ========================================================= */
+
+/* ---------- Scroll reveal + skill bar animation ---------- */
+function initScrollAnimations() {
+  const revealEls = document.querySelectorAll(".reveal");
+  const skillSection = document.getElementById("skills");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+
+          if (entry.target === skillSection) {
+            document.querySelectorAll(".skillbar__fill").forEach((fill, i) => {
+              setTimeout(() => fill.classList.add("filled"), i * 90);
+            });
+          }
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 },
+  );
+
+  revealEls.forEach((el) => observer.observe(el));
+}
+
+/* ---------- Active nav link on scroll ---------- */
+function initActiveNav() {
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".nav__links a");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute("id");
+          navLinks.forEach((link) => {
+            link.classList.toggle(
+              "active",
+              link.getAttribute("href") === `#${id}`,
+            );
+          });
+        }
+      });
+    },
+    { rootMargin: "-45% 0px -45% 0px" },
+  );
+
+  sections.forEach((section) => observer.observe(section));
+}
+
+/* ---------- Mobile nav toggle ---------- */
+function initMobileNav() {
+  const toggle = document.getElementById("navToggle");
+  const links = document.getElementById("navLinks");
+
+  toggle.addEventListener("click", () => {
+    const isOpen = links.classList.toggle("open");
+    toggle.classList.toggle("open", isOpen);
+    toggle.setAttribute("aria-expanded", isOpen);
+  });
+
+  // Close the menu automatically when a link is tapped
+  links.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      links.classList.remove("open");
+      toggle.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+}
+
 /* ---------- Init ---------- */
 typeHeroCode();
 loadProjects();
+initScrollAnimations();
+initActiveNav();
+initMobileNav();
